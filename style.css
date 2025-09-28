@@ -89,7 +89,7 @@ body {
 }
 
 .hero-section {
-  background: url('/images/wallpaper.jpeg') center/cover no-repeat;
+  background: url('images/wallpaper.jpeg') center/cover no-repeat;
   text-align: center;
   height: 100vh; 
   display: flex;
