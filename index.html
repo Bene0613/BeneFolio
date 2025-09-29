@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Benedicte | Junior Frontend Developer Brussels | Portfolio</title>
-  <meta name="description" content="Portfolio of Benedicte, junior frontend developer based in Brussels. Skilled in HTML, CSS, JavaScript, React and PHP. Explore my projects, skills, and get in touch for collaborations. Passionate about building functional and user-friendly digital experiences.">
+
+  <meta name="description" content="Portfolio of Benedicte, junior frontend developer based in Brussels. Skilled in HTML, CSS, JavaScript, React and PHP. Explore my projects, skills, and contact me to collaborate.">
   <meta name="keywords" content="frontend developer Brussels, junior web developer, portfolio developer, HTML CSS JavaScript React, Benedicte portfolio">
   <meta name="author" content="Benedicte">
   <link rel="canonical" href="https://thebenefolio.netlify.app/" />
@@ -28,20 +29,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kdam+Thmor+Pro&family=Kite+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Benedicte",
-    "jobTitle": "Junior Frontend Developer",
-    "url": "https://thebenefolio.netlify.app/",
-    "sameAs": [
-      "https://github.com/Bene0613",
-      "https://www.instagram.com/bxenedicte_/",
-      "https://linkedin.com/in/YOUR-LINKEDIN"
-    ]
-  }
-  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXX');
+</script>
+
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
   <script>
@@ -51,7 +46,10 @@
     gtag('config', 'G-XXXXXXX');
   </script>
 </head>
+
 <body>
+
+  <div class="top-bar"></div>
 
   <header class="hero-section">
     <nav class="navbar glass-nav">
@@ -77,24 +75,24 @@
     </div>
   </header>
 
-  <section id="projects">
+  <section class="wrapp" id="projects">
     <div class="projects">
       <div class="projectsDiv">
         <h2>My <span>Frontend Developer Projects</span></h2>
         <p id="proDesc">
-          Below are a few of the projects I’ve worked on, showcasing my skills in building responsive, user-friendly and visually appealing websites.
+          Click on a project to see more details.
         </p>
       </div>
 
       <div class="progrid">
         <div class="cardd" data-description="A streamlined one-page website for a European logistics company, emphasizing usability and brand presence.">
-          <img src="images/Group7.png" alt="Portfolio project - Alphalane Logistics web design by Benedicte">
+          <img src="images/Group 7.png" alt="Portfolio project - Alphalane Logistics web design by Benedicte, frontend developer">
           <h3>Alphalane Logistics</h3>
           <a href="project2.html" class="arrow"><i class="fas fa-arrow-right"></i></a>
         </div>
 
         <div class="cardd" data-description="A landing page for a fashion app that helps users create new outfits by uploading their wardrobe and getting inspiration from a social feed.">
-          <img src="images/Group5.png" alt="Portfolio project - Glamcrib landing page design by Benedicte">
+          <img src="images/Group 5.png" alt="Portfolio project - Glamcrib landing page design by Benedicte, frontend developer">
           <h3>Glamcrib Landing Page</h3>
           <a href="project1.html" class="arrow"><i class="fas fa-arrow-right"></i></a>
         </div>
@@ -108,55 +106,146 @@
     </div>
   </section>
 
-  <section id="skills">
-    <h2>Skills & Tools</h2>
-    <p>I specialize in frontend development with a strong focus on creating clean, functional and responsive websites. Here are the tools and technologies I use daily:</p>
-    <div class="tools-grid">
-      <div class="tool-card"><img src="images/html.png" alt="HTML logo"><p>HTML</p></div>
-      <div class="tool-card"><img src="images/css.png" alt="CSS logo"><p>CSS</p></div>
-      <div class="tool-card"><img src="images/javascript.png" alt="JavaScript logo"><p>JavaScript</p></div>
-      <div class="tool-card"><img src="images/react.png" alt="React logo"><p>React</p></div>
-      <div class="tool-card"><img src="images/php.png" alt="PHP logo"><p>PHP</p></div>
-      <div class="tool-card"><img src="images/figma.png" alt="Figma logo"><p>Figma</p></div>
+  <div class="around" id="skills">
+    <section class="favorite-tools">
+      <h2>Skills & Tools</h2>
+
+      <div class="tools-grid">
+        <div class="tool-card">
+          <img src="images/html.png" alt="HTML logo">
+          <p class="percentage">95%</p>
+          <p class="tool-name">HTML</p>
+        </div>
+        <div class="tool-card">
+          <img src="images/css.png" alt="CSS logo">
+          <p class="percentage">90%</p>
+          <p class="tool-name">CSS</p>
+        </div>
+        <div class="tool-card">
+          <img src="images/javascript.png" alt="JavaScript logo">
+          <p class="percentage">90%</p>
+          <p class="tool-name">JavaScript</p>
+        </div>
+        <div class="tool-card">
+          <img src="images/react.png" alt="React logo">
+          <p class="percentage">60%</p>
+          <p class="tool-name">React</p>
+        </div>
+        <div class="tool-card">
+          <img src="images/php.png" alt="PHP logo">
+          <p class="percentage">85%</p>
+          <p class="tool-name">PHP</p>
+        </div>
+        <div class="tool-card">
+          <img src="images/figma.png" alt="Figma logo">
+          <p class="percentage">95%</p>
+          <p class="tool-name">Figma</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="extra-skills-row">
+      <section class="extra-skills soft-skills">
+        <h2>Soft Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-icon"><i class="fas fa-users"></i><span>Collaboration</span></div>
+          <div class="skill-icon"><i class="fas fa-sync-alt" style="color: #A8CBB7;"></i><span>Adaptability</span></div>
+          <div class="skill-icon"><i class="fas fa-clock"></i><span>Time Management</span></div>
+        </div>
+      </section>
+
+      <section class="extra-skills interests">
+        <h2>Personal Interests</h2>
+        <div class="skills-grid">
+          <div class="skill-icon"><i class="fas fa-spa"></i><span>Skincare</span></div>
+          <div class="skill-icon"><i class="fas fa-utensils" style="color: #A8CBB7;"></i><span>Cooking</span></div>
+          <div class="skill-icon"><i class="fa-solid fa-shoe-prints"></i><span>Climbing</span></div>
+        </div>
+      </section>
+
+      <section class="extra-skills languages">
+        <h2>Languages</h2>
+        <div class="skills-grid">
+          <div class="skill-icon"><i class="fas fa-flag"></i><span>French</span></div>
+          <div class="skill-icon"><i class="fas fa-flag-usa" style="color: #A8CBB7;"></i><span>English</span></div>
+          <div class="skill-icon"><i class="fas fa-flag"></i><span>Dutch</span></div>
+        </div>
+      </section>
     </div>
-  </section>
+  </div>
 
-  <section id="contact">
-    <h2>Get in Touch</h2>
-    <p>If you’d like to collaborate, hire me, or just say hello, feel free to reach out. I’m always open to exciting opportunities and projects.</p>
-    <form action="https://formspree.io/f/xpwyqeyj" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+  <div class="trial">
+    <section id="contactForm" class="contactPart">
+      <div class="contact-form-wrapper">
+        <h2>Get in Touch</h2>
+        <p>Have a project or idea? Drop me a message and I’ll get back to you!</p>
+        <form id="contactForm" class="contactForm" action="https://formspree.io/f/xpwyqeyj" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </div>
 
-  <footer>
+  <footer id="contact">
     <h2>Interested in working together?</h2>
-    <a href="#contact" class="btn">Let’s Chat →</a>
+    <a href="#contactForm" class="btn">Let’s Chat →</a>
     <p class="footer-links">
       <a href="https://www.instagram.com/bxenedicte_/">Instagram</a> · 
       <a href="#">LinkedIn</a> · 
-      <a href="#">Discord</a>
+      <a href="#">Discord</a> · 
     </p>
     <p class="copyright">©2025 · All Rights Reserved</p>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const name = "Benedicte";
-      const typedName = document.getElementById("typed-name");
-      let i = 0;
-      function typeLetter() {
-        if (i < name.length) {
-          typedName.textContent += name.charAt(i);
-          i++;
-          setTimeout(typeLetter, 150); 
-        }
-      }
-      typeLetter();
+<script>
+  document.body.classList.add('lock-scroll');
+
+  const heroBtn = document.querySelector('.hero-btn');
+  heroBtn.addEventListener('click', () => {
+    document.body.classList.remove('lock-scroll');
+    const target = document.querySelector('#projects');
+    target.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  const navLinks = document.querySelectorAll('.navLinks a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.remove('lock-scroll'); 
+      const targetId = link.getAttribute('data-target');
+      const section = document.getElementById(targetId);
+      section.scrollIntoView({ behavior: 'smooth' });
     });
-  </script>
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const name = "Benedicte";
+    const typedName = document.getElementById("typed-name");
+    let i = 0;
+
+    function typeLetter() {
+      if (i < name.length) {
+        typedName.textContent += name.charAt(i);
+        i++;
+        setTimeout(typeLetter, 150); 
+      }
+    }
+
+    typeLetter();
+  });
+
+  const serviceCards = document.querySelectorAll(".cardd");
+  const serviceDescription = document.getElementById("proDesc");
+
+  serviceCards.forEach(card => {
+    card.addEventListener("click", () => {
+      const desc = card.getAttribute("data-description");
+      serviceDescription.textContent = desc;
+    });
+  });
+</script>
 </body>
 </html>
