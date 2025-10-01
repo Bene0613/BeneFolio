@@ -466,6 +466,31 @@ footer .copyright {
   opacity: 0.8;
 }
 
+/* === Scroll Animations === */
+.animate {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Fade Up */
+.fade-up {
+  transform: translateY(40px);
+}
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Zoom In */
+.zoom-in {
+  transform: scale(0.9);
+}
+.zoom-in.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
 @media (max-width: 992px) {
   .glass-nav {
     padding: 0.8rem 1.2rem;
