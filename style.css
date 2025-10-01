@@ -89,7 +89,7 @@ body {
 }
 
 .hero-section {
-  background: url('images/wallpaper.jpeg') center/cover no-repeat;
+  background: url('images/wall2.jpeg') center/cover no-repeat;
   text-align: center;
   height: 100vh; 
   display: flex;
@@ -278,28 +278,9 @@ body.lock-scroll {
   padding: 60px 20px;
 }
 
-.favorite-tools {
+.tools {
   text-align: center;
   margin: 60px auto;
-}
-
-.tools-title {
-  font-size: 1rem;
-  color: #888;
-  margin-bottom: 8px;
-}
-
-.tools-subtitle {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 40px;
-  line-height: 1.4;
-}
-
-.tools-subtitle span {
-  color: #A8CBB7; 
-  font-style: italic;
-  font-size: smaller;
 }
 
 .tools-grid {
