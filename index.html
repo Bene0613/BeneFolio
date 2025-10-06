@@ -29,37 +29,52 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kdam+Thmor+Pro&family=Kite+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JV5F41J76Y"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JV5F41J76Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JV5F41J76Y');
+  </script>
 
-  gtag('config', 'G-JV5F41J76Y');
-</script>
-<!-- Hotjar Tracking Code for https://thebenefolio.netlify.app/ -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:6535023,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:6535023,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Benedicte",
+    "jobTitle": "Junior Frontend Developer",
+    "url": "https://thebenefolio.netlify.app/",
+    "sameAs": [
+      "https://www.instagram.com/bxenedicte_/",
+      "https://github.com/Bene0613",
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance"
+    }
+  }
+  </script>
 </head>
 
 <body>
-
   <div class="top-bar"></div>
 
   <header class="hero-section">
     <nav class="navbar glass-nav">
       <ul class="navLinks">
         <li><a href="#" data-target="projects">Work</a></li>
-        <li><a href="#" data-target="skills">About</a></li>
+        <li><a href="#" data-target="skills">Skills</a></li>
         <li><a href="#" data-target="contact">Contact</a></li>
       </ul>
     </nav>
@@ -78,6 +93,18 @@
       <a href="docs/it_cv.pdf" target="_blank" class="cta-button hero-btn">View My CV</a>
     </div>
   </header>
+
+ <section class="about fade-up">
+  <h2>In my world!</h2>
+  <p>
+    I’m <span>Benedicte</span>, a junior frontend developer based in Brussels. 
+    What I love most about being a developer is transforming an <span>abstract idea</span> 
+    or need into a real, polished product that people can use. 
+    The process of going from nothing but a concept to a functional experience 
+    truly inspires me. I’m passionate about creating clean, user-friendly, 
+    and delightful digital solutions that make an impact.
+  </p>
+</section>
 
   <section class="wrapp animate zoom-in" id="projects">
     <div class="projects">
@@ -113,38 +140,13 @@
   <div class="around animate fade-up" id="skills">
     <section class="tools">
       <h2>Skills & <span style="color: #A8CBB7;">Tools~</span></h2>
-
       <div class="tools-grid">
-        <div class="tool-card">
-          <img src="images/html.png" alt="HTML logo">
-          <p class="percentage">95%</p>
-          <p class="tool-name">HTML</p>
-        </div>
-        <div class="tool-card">
-          <img src="images/css.png" alt="CSS logo">
-          <p class="percentage">90%</p>
-          <p class="tool-name">CSS</p>
-        </div>
-        <div class="tool-card">
-          <img src="images/javascript.png" alt="JavaScript logo">
-          <p class="percentage">90%</p>
-          <p class="tool-name">JavaScript</p>
-        </div>
-        <div class="tool-card">
-          <img src="images/react.png" alt="React logo">
-          <p class="percentage">60%</p>
-          <p class="tool-name">React</p>
-        </div>
-        <div class="tool-card">
-          <img src="images/php.png" alt="PHP logo">
-          <p class="percentage">85%</p>
-          <p class="tool-name">PHP</p>
-        </div>
-        <div class="tool-card">
-          <img src="images/figma.png" alt="Figma logo">
-          <p class="percentage">95%</p>
-          <p class="tool-name">Figma</p>
-        </div>
+        <div class="tool-card"><img src="images/html.png" alt="HTML logo"><p class="percentage">95%</p><p class="tool-name">HTML</p></div>
+        <div class="tool-card"><img src="images/css.png" alt="CSS logo"><p class="percentage">90%</p><p class="tool-name">CSS</p></div>
+        <div class="tool-card"><img src="images/javascript.png" alt="JavaScript logo"><p class="percentage">90%</p><p class="tool-name">JavaScript</p></div>
+        <div class="tool-card"><img src="images/react.png" alt="React logo"><p class="percentage">60%</p><p class="tool-name">React</p></div>
+        <div class="tool-card"><img src="images/php.png" alt="PHP logo"><p class="percentage">85%</p><p class="tool-name">PHP</p></div>
+        <div class="tool-card"><img src="images/figma.png" alt="Figma logo"><p class="percentage">95%</p><p class="tool-name">Figma</p></div>
       </div>
     </section>
 
@@ -180,12 +182,12 @@
 
   <div class="trial animate fade-up">
     <section id="contactForm" class="contactPart">
-      <div class="contact-form-wrapper">
+      <div class="contact-form-wrapper h-card">
         <h2>Get in Touch</h2>
         <p>Have a project or idea? Drop me a message and I’ll get back to you!</p>
         <form id="contactForm" class="contactForm" action="https://formspree.io/f/xpwyqeyj" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="text" name="name" placeholder="Your Name" class="p-name" required>
+          <input type="email" name="email" placeholder="Your Email" class="u-email" required>
           <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
           <button type="submit" class="btn">Send Message</button>
         </form>
@@ -204,62 +206,52 @@
     <p class="copyright">©2025 · All Rights Reserved</p>
   </footer>
 
-<script>
-
-  const navLinks = document.querySelectorAll('.navLinks a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      document.body.classList.remove('lock-scroll'); 
-      const targetId = link.getAttribute('data-target');
-      const section = document.getElementById(targetId);
-      section.scrollIntoView({ behavior: 'smooth' });
+  <script>
+    const navLinks = document.querySelectorAll('.navLinks a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.body.classList.remove('lock-scroll'); 
+        const targetId = link.getAttribute('data-target');
+        const section = document.getElementById(targetId);
+        section.scrollIntoView({ behavior: 'smooth' });
+      });
     });
-  });
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const name = "Benedicte";
-    const typedName = document.getElementById("typed-name");
-    let i = 0;
-
-    function typeLetter() {
-      if (i < name.length) {
-        typedName.textContent += name.charAt(i);
-        i++;
-        setTimeout(typeLetter, 150); 
+    document.addEventListener("DOMContentLoaded", () => {
+      const name = "Benedicte";
+      const typedName = document.getElementById("typed-name");
+      let i = 0;
+      function typeLetter() {
+        if (i < name.length) {
+          typedName.textContent += name.charAt(i);
+          i++;
+          setTimeout(typeLetter, 150); 
+        }
       }
-    }
-
-    typeLetter();
-  });
-
-  const serviceCards = document.querySelectorAll(".cardd");
-  const serviceDescription = document.getElementById("proDesc");
-
-  serviceCards.forEach(card => {
-    card.addEventListener("click", () => {
-      const desc = card.getAttribute("data-description");
-      serviceDescription.textContent = desc;
+      typeLetter();
     });
-  });
-const animatedItems = document.querySelectorAll(".animate");
 
-const observerOptions = {
-  threshold: 0.2, 
-  rootMargin: "0px 0px -50px 0px"
-};
+    const serviceCards = document.querySelectorAll(".cardd");
+    const serviceDescription = document.getElementById("proDesc");
+    serviceCards.forEach(card => {
+      card.addEventListener("click", () => {
+        const desc = card.getAttribute("data-description");
+        serviceDescription.textContent = desc;
+      });
+    });
 
-const observer = new IntersectionObserver((entries, obs) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-      obs.unobserve(entry.target); 
-    }
-  });
-}, observerOptions);
-
-animatedItems.forEach(item => observer.observe(item));
-
-</script>
+    const animatedItems = document.querySelectorAll(".animate");
+    const observerOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          obs.unobserve(entry.target); 
+        }
+      });
+    }, observerOptions);
+    animatedItems.forEach(item => observer.observe(item));
+  </script>
 </body>
 </html>

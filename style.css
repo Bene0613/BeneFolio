@@ -101,6 +101,8 @@ body {
   overflow: hidden;
 }
 
+
+
 body.lock-scroll {
   overflow: hidden;
 }
@@ -164,9 +166,44 @@ body.lock-scroll {
   background-color: white;
     padding: 75px;
 }
+.about {
+  max-width: 900px;
+  margin: 120px auto;
+  padding: 60px 30px;
+  text-align: center;
+  position: relative;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 100%;
+  background: radial-gradient(circle at top, #A8CBB733 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.about h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #2F2F2F;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 
 .projects {
-  background: #f1f1f1; /* dark container */
+  background: #f1f1f1; 
   border: 1px solid #8C9A65;
   outline: 0.5px solid #8C9A65;
   border-radius: 15px;
