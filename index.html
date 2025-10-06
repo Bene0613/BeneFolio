@@ -84,7 +84,7 @@
       <div class="projectsDiv">
         <h2>My <span style="color: #A8CBB7;">Projects~</span></h2>
         <p id="proDesc">
-          Click on a project to see more details.
+          Click on the arrow to see the project details!!
         </p>
       </div>
 
@@ -242,11 +242,10 @@
       serviceDescription.textContent = desc;
     });
   });
-  // Scroll-triggered animations (fade-up + zoom-in)
 const animatedItems = document.querySelectorAll(".animate");
 
 const observerOptions = {
-  threshold: 0.2, // % visible before trigger
+  threshold: 0.2, 
   rootMargin: "0px 0px -50px 0px"
 };
 
@@ -254,7 +253,7 @@ const observer = new IntersectionObserver((entries, obs) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
-      obs.unobserve(entry.target); // remove if you only want it once
+      obs.unobserve(entry.target); 
     }
   });
 }, observerOptions);
