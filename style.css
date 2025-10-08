@@ -615,7 +615,7 @@ footer .copyright {
   }
 }
 
-@media (max-width: 480px) {
+@media  (max-width: 420px) and (min-width: 360px) {
   body {
     font-size: 14px;
   }
@@ -625,8 +625,8 @@ footer .copyright {
   }
 
   .hero-btn {
-    width: 100%;
-    padding: 10px;
+    padding: 10px 16px;
+    font-size: 0.9rem;
   }
 
   .cardd img {
