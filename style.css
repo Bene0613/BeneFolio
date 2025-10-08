@@ -525,7 +525,7 @@ footer .copyright {
 }
 
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .glass-nav {
     padding: 0.8rem 1.2rem;
     gap: 1rem;
@@ -616,7 +616,7 @@ footer .copyright {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 468px) {
   body {
     font-size: 0.9rem;
   }
