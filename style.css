@@ -201,18 +201,18 @@ body.lock-scroll {
   margin: 0 auto;
 }
 
-
 .projects {
   background: #f1f1f1; 
   border: 1px solid #8C9A65;
-  outline: 0.5px solid #8C9A65;
   border-radius: 15px;
-  outline-offset: 5px;
-  color: #fff;
-  padding: 60px 20px;
-  margin: 60px auto;
+  color: #2F2F2F;
+  padding: 50px 5%;
+  margin: 50px auto;
   max-width: 1100px;
+  text-align: center;
+  box-sizing: border-box;
 }
+
 
 .projectsDiv {
   display: flex;
@@ -503,13 +503,11 @@ footer .copyright {
   opacity: 0.8;
 }
 
-/* === Scroll Animations === */
 .animate {
   opacity: 0;
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Fade Up */
 .fade-up {
   transform: translateY(40px);
 }
@@ -518,7 +516,6 @@ footer .copyright {
   transform: translateY(0);
 }
 
-/* Zoom In */
 .zoom-in {
   transform: scale(0.9);
 }
@@ -629,6 +626,18 @@ footer .copyright {
   .hero-btn {
     padding: 10px 16px;
     font-size: 0.9rem;
+  }
+
+  
+  .projects {
+    padding: 40px 15px;
+  }
+  .projectsDiv {
+    gap: 20px;
+  }
+  .cardd {
+    width: 100%;
+    max-width: 350px;
   }
   .cardd h3 {
     font-size: 1rem;
