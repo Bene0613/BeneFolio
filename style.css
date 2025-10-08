@@ -615,7 +615,7 @@ footer .copyright {
   }
 }
 
-@media  (max-width: 420px) and (min-width: 360px) {
+@media (max-width: 480px) {
   body {
     font-size: 14px;
   }
