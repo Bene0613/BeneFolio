@@ -204,12 +204,6 @@ body {
   100% { transform: rotate(0deg); }
 }
 
-@media (hover: none) {
-  .cardd:active {
-    transform: translateY(-3px);
-  }
-}
-
 .cardd img {
   width: 100%;
   height: auto;
@@ -342,7 +336,6 @@ body {
   background: #A8CBB7;
   transform: translateY(-2px);
 }
-
 
 @media (max-width: 1024px) {
   .cardd {
