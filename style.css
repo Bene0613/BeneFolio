@@ -549,6 +549,33 @@ footer .copyright {
 }
 
 @media (max-width: 600px) {
+
+    .glass-nav {
+    position: static;
+    transform: none;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.8rem 1rem;
+  }
+
+  .social-icons {
+    position: static;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
+   .navLinks a {
+    font-size: 0.85rem;
+  }
+  .navLinks {
+    gap: 1rem;
+  }
+
+  header.hero-section {
+    padding-top: 5rem; 
+  }
+
   .hero-section {
     height: auto;
     padding: 100px 20px;
