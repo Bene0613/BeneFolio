@@ -86,7 +86,7 @@
     </div>
 
     <div class="hero-text fade-in" id="home">
-      <h1>Hello, I’m <span class="highlight typing" id="typed-name"></span> 👋</h1>
+      <h1>Hello, I’m <span class="highlight typing" id="typed-name"></span><span class="wave-hand">👋</span></h1>
       <p><strong>Junior Frontend Developer based in Brussels</strong></p>
       <p>Building clean, functional & delightful digital experiences with HTML, CSS, JavaScript & React.</p>
       <a href="#projects" class="cta-button hero-btn">View My Work</a>
@@ -220,6 +220,8 @@
           typedName.textContent += name.charAt(i);
           i++;
           setTimeout(typeLetter, 150); 
+        } else {
+          typedName.style.borderRight = "none";
         }
       }
       typeLetter();
