@@ -16,6 +16,77 @@ body {
   background: linear-gradient(to right, #8C9A65, #A8CBB7);
 }
 
+.glass-nav {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 40px;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navLinks a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #2F2F2F;
+  position: relative;
+}
+
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: #8C9A65;
+  transition: 0.3s;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+.social-icons {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.icon-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.9);
+  color: #8C9A65;
+  font-size: 1.2rem;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.icon-circle:hover {
+  background: #8C9A65;
+  color: #fff;
+}
+
 .hero-section {
   background: url('images/wall2.jpeg') center/cover no-repeat;
   text-align: center;
@@ -126,8 +197,13 @@ body {
   margin: 0 auto;
 }
 
+.wrapp {
+  background-color: white;
+  padding: 75px;
+}
+
 .projects {
-  background: red;
+  background: #f1f1f1;
   border: 1px solid #8C9A65;
   border-radius: 15px;
   color: #2F2F2F;
