@@ -128,7 +128,7 @@ body {
 
 .projects {
   background: #f1f1f1;
-  border: 1px solid red;
+  border: 1px solid #8C9A65;
   border-radius: 15px;
   color: #2F2F2F;
   padding: 50px 5%;
@@ -241,7 +241,6 @@ body {
   transform: rotate(-30deg);
   transition: transform 0.3s ease;
 }
-
 
 .around {
   padding: 75px;
