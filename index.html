@@ -245,6 +245,18 @@
       });
     }, observerOptions);
     animatedItems.forEach(item => observer.observe(item));
+document.querySelectorAll('.cardd').forEach(card => {
+  const link = card.querySelector('a.arrow');
+  if (link) {
+    card.addEventListener('click', (e) => {
+      if (!e.target.closest('a.arrow')) {
+        window.location.href = link.href;
+      }
+    });
+    card.style.cursor = 'pointer';
+  }
+});
+
   </script>
 </body>
 </html>
