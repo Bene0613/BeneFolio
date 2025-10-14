@@ -587,6 +587,7 @@ footer .copyright {
 
   .hero-text h1 {
     font-size: 1.8rem;
+    padding-right: 0px;
   }
 
   .hero-text p {
@@ -656,5 +657,9 @@ footer .copyright {
 @media (max-width: 480px) {
   .social-icons {
     display: none;
+  }
+  .hero-text h1 {
+    font-size: 1.8rem;
+    padding-right: 0px;
   }
 }
