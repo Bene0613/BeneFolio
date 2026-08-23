@@ -243,18 +243,19 @@ body {
 }
 
 .progrid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 350px));
   justify-content: center;
+  gap: 25px;
 }
+
 .cardd {
-  flex: 1;
-  min-width: 30%; 
-  max-width: 350px;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
   background: rgba(255, 255, 255, 0.7);
-  border: 1px solid #8C9A65; 
-  box-shadow: 0 0 0 1px #A8CBB7; 
+  border: 1px solid #8C9A65;
+  box-shadow: 0 0 0 1px #A8CBB7;
   border-radius: 15px;
   padding: 20px;
   text-align: center;
@@ -265,7 +266,15 @@ body {
 
 .cardd:hover {
   transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.3), 0 0 0 1px #A8CBB7;
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.3),
+    0 0 0 1px #A8CBB7;
+}
+
+.cardd h3 {
+  padding-right: 50px;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
 }
 
 @keyframes blink {
@@ -549,6 +558,20 @@ footer .copyright {
   
   .projectsDiv {
     gap: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .progrid {
+    grid-template-columns: minmax(0, 350px);
+  }
+
+  .wrapp {
+    padding: 30px 15px;
+  }
+
+  .projects {
+    padding: 35px 20px;
   }
 }
 
