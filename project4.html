@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ben & Jerry’s 3D Customizer | Benedicte Portfolio</title>
+
+  <meta
+    name="description"
+    content="Discover an interactive 3D Ben & Jerry’s ice cream customizer with an ordering system and Vue.js admin dashboard."
+  >
+  <meta
+    name="keywords"
+    content="Ben and Jerry's, 3D customizer, Vue.js, Node.js, Express, MongoDB, frontend developer, Benedicte portfolio"
+  >
+  <meta name="author" content="Benedicte">
+
+  <link
+    rel="canonical"
+    href="https://www.thebenefolio.be/project4.html"
+  >
+
+  <!-- Open Graph -->
+  <meta
+    property="og:title"
+    content="Ben & Jerry’s 3D Customizer | Benedicte Portfolio"
+  >
+  <meta
+    property="og:description"
+    content="An interactive 3D ice cream customizer with an ordering system and admin dashboard."
+  >
+  <meta
+    property="og:image"
+    content="https://www.thebenefolio.be/images/benjerrys-cover.png"
+  >
+  <meta
+    property="og:url"
+    content="https://www.thebenefolio.be/project4.html"
+  >
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta
+    name="twitter:title"
+    content="Ben & Jerry’s 3D Customizer | Benedicte Portfolio"
+  >
+  <meta
+    name="twitter:description"
+    content="Create and order a custom ice cream through an interactive 3D experience."
+  >
+  <meta
+    name="twitter:image"
+    content="https://www.thebenefolio.be/images/benjerrys-cover.png"
+  >
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Outfit", sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #FAF9F6;
+      color: #2F2F2F;
+      line-height: 1.6;
+    }
+
+    .backButton {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border: 1px solid #2F2F2F;
+      border-radius: 6px;
+      background-color: #FFFFFF;
+      color: #2F2F2F;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .backButton:hover,
+    .backButton:focus-visible {
+      background-color: #8C9A65;
+      color: #FFFFFF;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 50vh;
+      padding: 100px 20px 60px;
+      background:
+        url("images/benjerrys-cover.png")
+        center / cover
+        no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    .heroContent {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      color: #FFFFFF;
+    }
+
+    .heroContent h1 {
+      margin-bottom: 10px;
+      font-size: clamp(2.2rem, 6vw, 3.5rem);
+      line-height: 1.1;
+    }
+
+    .heroContent p {
+      font-size: clamp(1rem, 3vw, 1.25rem);
+      opacity: 0.95;
+    }
+
+    main {
+      padding: 1px 20px;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 30px;
+      border-radius: 20px;
+      background-color: #FFFFFF;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .section h2 {
+      margin-bottom: 15px;
+      color: #8C9A65;
+      font-size: 1.8rem;
+      line-height: 1.2;
+    }
+
+    .section p {
+      color: #444444;
+      font-size: 1rem;
+    }
+
+    .section p + p {
+      margin-top: 15px;
+    }
+
+    .sectionImg {
+      margin: 30px 0 5px;
+      text-align: center;
+    }
+
+    .sectionImg img {
+      display: block;
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .buttonContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .projectLink {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 30px;
+      background-color: #8C9A65;
+      color: #FFFFFF;
+      font-size: 1rem;
+      text-decoration: none;
+      transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+    }
+
+    .projectLink:hover,
+    .projectLink:focus-visible {
+      background-color: #A8CBB7;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 3rem 2rem;
+      background-color: #A8CBB7;
+      color: #FFFFFF;
+      text-align: center;
+    }
+
+    footer h2 {
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+
+    footer .footerLinks {
+      margin: 1rem 0;
+    }
+
+    footer .footerLinks a {
+      margin: 0 0.5rem;
+      color: #FFFFFF;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+
+    footer .footerLinks a:hover,
+    footer .footerLinks a:focus-visible {
+      opacity: 0.7;
+    }
+
+    footer .copyright {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 600px) {
+      .backButton {
+        top: 12px;
+        left: 12px;
+      }
+
+      .hero {
+        min-height: 55vh;
+      }
+
+      main {
+        padding: 1px 15px;
+      }
+
+      .section {
+        margin: 35px auto;
+        padding: 22px;
+        border-radius: 15px;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+      }
+
+      .projectLink {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+
+  <!-- Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-JV5F41J76Y"
+  ></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+    gtag("config", "G-JV5F41J76Y");
+  </script>
+
+  <!-- Hotjar -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () {
+        (h.hj.q = h.hj.q || []).push(arguments);
+      };
+
+      h._hjSettings = {
+        hjid: 6580029,
+        hjsv: 6
+      };
+
+      a = o.getElementsByTagName("head")[0];
+      r = o.createElement("script");
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(
+      window,
+      document,
+      "https://static.hotjar.com/c/hotjar-",
+      ".js?sv="
+    );
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Ben & Jerry’s 3D Customizer",
+      "author": {
+        "@type": "Person",
+        "name": "Bénédicte"
+      },
+      "description": "An interactive 3D ice cream customizer with an ordering system and Vue.js admin dashboard.",
+      "url": "https://www.thebenefolio.be/project4.html",
+      "image": "https://www.thebenefolio.be/images/benjerrys-cover.png"
+    }
+  </script>
+</head>
+
+<body>
+  <a href="index.html" class="backButton">
+    <i class="fas fa-arrow-left" aria-hidden="true"></i>
+    Back to homepage
+  </a>
+
+  <header class="hero">
+    <div class="heroContent">
+      <h1>Ben & Jerry’s 3D Customizer</h1>
+      <p>Create, customize and order your own ice cream</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>Overview</h2>
+
+      <p>
+        For this project, I created an interactive website for the fictional
+        client Ben & Jerry’s. Visitors can customize their own ice cream
+        through a 3D experience and place an order.
+      </p>
+
+      <p>
+        The project also includes an admin dashboard where incoming orders can
+        be viewed and managed. This project allowed me to combine design,
+        frontend development, 3D and backend development in one application.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>The Concept</h2>
+
+      <p>
+        The goal was to create a playful experience that fits the colorful
+        identity of Ben & Jerry’s. Users can customize the ice cream by
+        changing [CUSTOMIZATION OPTION 1] and [CUSTOMIZATION OPTION 2].
+        Once they are happy with their creation, they can enter their
+        information and place the order.
+      </p>
+
+      <p>
+        For the visual style, I used [COLORS, FONTS OR VISUAL ELEMENTS].
+        I wanted the website to feel fun and recognizable while still being
+        clear and easy to use.
+      </p>
+
+      <div class="sectionImg">
+        <img
+          src="images/benjerrys-concept.png"
+          alt="Design process for the Ben and Jerry's 3D customizer"
+        >
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Development Process</h2>
+
+      <p>
+        I built the project from scratch using [FRONTEND AND 3D TECHNOLOGIES].
+        The order information is sent to an API made with Node.js and Express.
+        The orders are then stored in a MongoDB database.
+      </p>
+
+      <p>
+        One of the biggest challenges was [MAIN TECHNICAL CHALLENGE].
+        I solved this by [SHORT EXPLANATION OF YOUR SOLUTION].
+      </p>
+
+      <div class="sectionImg">
+        <img
+          src="images/benjerrys-customizer.png"
+          alt="Interactive 3D Ben and Jerry's ice cream customizer"
+        >
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Order Management</h2>
+
+      <p>
+        I also created a separate admin dashboard with Vue.js. The admin can
+        log in, view all incoming orders and open an order to see the customer
+        name, address and total price.
+      </p>
+
+      <p>
+        Each order can be marked as pending, shipped or cancelled. The admin
+        can also delete an order when it is no longer needed.
+      </p>
+
+      <div class="sectionImg">
+        <img
+          src="images/benjerrys-dashboard.png"
+          alt="Vue.js admin dashboard for managing Ben and Jerry's orders"
+        >
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>The Final Result</h2>
+
+      <p>
+        Compared to my previous project for Lay’s, I paid more attention to
+        [WHAT YOU IMPROVED]. I am more satisfied with this project because
+        [WHY YOU ARE PROUD OF IT].
+      </p>
+
+      <p>
+        The final application connects the 3D customizer, the ordering system,
+        the API, the database and the admin dashboard. This makes it one of
+        the most complete development projects I have worked on so far.
+      </p>
+
+      <div class="sectionImg">
+        <img
+          src="images/benjerrys-final.png"
+          alt="Final result of the Ben and Jerry's 3D customizer"
+        >
+      </div>
+
+      <div class="buttonContainer">
+        <a
+          href="[GITHUB FRONTEND URL]"
+          class="projectLink"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-github" aria-hidden="true"></i>
+          Frontend on GitHub
+        </a>
+
+        <a
+          href="[LIVE WEBSITE URL]"
+          class="projectLink"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+          View Live Site
+        </a>
+
+        <a
+          href="[ADMIN DASHBOARD URL]"
+          class="projectLink"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fas fa-table-columns" aria-hidden="true"></i>
+          View Admin Dashboard
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Reflection</h2>
+
+      <p>
+        This project gave me the chance to improve on the feedback I received
+        for my earlier Lay’s project. I learned more about working with 3D
+        elements, connecting a frontend to an API and storing information in
+        a database.
+      </p>
+
+      <p>
+        I also gained more experience with Vue.js by building the admin
+        dashboard. The project combines design and development, which is why
+        I decided to add it to my portfolio.
+      </p>
+    </section>
+  </main>
+
+   <footer id="contact">
+    <h2>Interested in working together?</h2>
+    <p class="footerLinks">
+      <a href="https://www.instagram.com/bxenedicte_/">Instagram</a> · 
+      <a href="#">LinkedIn</a> · 
+      <a href="#">Discord</a> · 
+    </p>
+    <p class="copyright">©2025 · All Rights Reserved</p>
+  </footer>
+</body>
+</html>
